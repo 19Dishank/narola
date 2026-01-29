@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                document.getElementById('demo').innerHTML = "Second Paragraph";
+            }
+            function myFunctionUsingText(){
+                document.getElementById('demo').innerText = "Value changes using innerText";
+            }
+             function myFunctionUsingWrite(){
+                document.write('<b>document.write</b> will delete all existing html element and display what assigned in it.')
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Click button to see date and time</h3>
+        <input type="button" onclick="document.getElementById('display').innerHTML = Date()" value="Click me"/>
+        <p id="display"></p>
+
+        <h3>Change Value of Attribute using JS</h3>
+        <button type="button" onclick="document.getElementById('changeImg').src= 'light.webp'">light Mode</button>
+        <img id="changeImg" src="light.webp"/>
+        <button type="button" onclick="document.getElementById('changeImg').src= 'dark.webp'">Dark Mode</button>
+
+        <h3>JS Output using Script tag</h3>
+        <p id="demo">First Paragraph</p>
+        <button onclick="myFunction()">innerHTML Demo</button>
+        <button onclick="myFunctionUsingText()">innerText Demo</button>
+        <button onclick="myFunctionUsingWrite()">innerText Demo</button>
+    </body>
+</html>

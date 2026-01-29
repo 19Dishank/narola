@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Breaking Bad",
+        "id": "breaking-bad",
+        "img_url": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+        "rating": "9.5",
+        "description": "A chemistry teacher turns into a ruthless drug kingpin after a terminal diagnosis.",
+        "cast": ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
+        "genre": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "name": "Game of Thrones",
+        "id": "game-of-thrones",
+        "img_url": "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+        "rating": "9.2",
+        "description": "Noble families battle for control of the Iron Throne in a brutal fantasy world.",
+        "cast": ["Emilia Clarke", "Kit Harington", "Peter Dinklage"],
+        "genre": ["Fantasy", "Drama", "Adventure"]
+    },
+    {
+        "name": "Interstellar",
+        "id": "interstellar",
+        "img_url": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+        "rating": "8.6",
+        "description": "A group of astronauts travel through a wormhole to save humanity from extinction.",
+        "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+        "genre": ["Sci-Fi", "Drama", "Adventure"]
+    },
+    {
+        "name": "Dark",
+        "id": "dark",
+        "img_url": "https://image.tmdb.org/t/p/w500/apbrbWs8M9lyOpJYU5WXrpFbk1Z.jpg",
+        "rating": "8.8",
+        "description": "A missing child uncovers time travel, secrets, and a twisted family mystery.",
+        "cast": ["Louis Hofmann", "Lisa Vicari", "Oliver Masucci"],
+        "genre": ["Sci-Fi", "Mystery", "Thriller"]
+    },
+    {
+        "name": "The Lord of the Rings: The Fellowship of the Ring",
+        "id": "lotr-fellowship",
+        "img_url": "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+        "rating": "8.8",
+        "description": "A hobbit begins a perilous journey to destroy a powerful ring.",
+        "cast": ["Elijah Wood", "Ian McKellen", "Viggo Mortensen"],
+        "genre": ["Fantasy", "Adventure"]
+    }
+]

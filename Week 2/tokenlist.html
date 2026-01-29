@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body change="heightWidth()">
+    <canvas id="myCanvas" width="300" height="300" style="border:1px solid grey"></canvas>
+    <div id="myDiv">
+        <p id="height"></p>
+        <p id="demo">Hello World!</p>
+        <button onclick="changeStyle()">Change Style</button>
+        <button onclick="removeOneclass()">Remove Style</button>
+    </div><br>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:khaki;"></div>
+        <div id="pinkDiv" style="background-color:pink;"></div>
+        <div style="background-color:lightgrey;"></div>
+        <div style="background-color:lightgreen;"></div>
+    </div>
+    <button onclick="alignContentFun()">Align content</button>
+    <button onclick="alignSelfFun()">Align Self</button>
+    
+    <script>
+        myCanvas = document.getElementById('myCanvas');
+        const ctx = myCanvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(10,0);
+        ctx.lineTo(10,100);
+        ctx.lineTo(70,100);
+        ctx.arc(150,150, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        function changeStyle() {
+            document.getElementById('demo').classList.add('myStyle', 'thirdClass');
+            // document.getElementById('demo').classList.remove('myStyle');
+            // document.getElementById('demo').classList.toggle('myStyle');
+        }
+        function removeOneclass() {
+            const elelemt = document.getElementById('demo');
+            if (elelemt.classList.contains('thirdClass')) {
+                elelemt.classList.remove('thirdClass');
+            }
+            elelemt.classList.replace('myStyle', 'anotherClass')
+        }
+        function alignContentFun(){
+            document.getElementById('main').style.alignContent = "space-between"
+            // document.getElementById('main').style.alignContent = "center"
+            // document.getElementById('main').style.alignContent = "flex-start"
+            // document.getElementById('main').style.alignContent = "flex-end"
+            // document.getElementById('main').style.alignContent = "space-around"
+            // document.getElementById('main').style.alignContent = "initial"
+            // document.getElementById('main').style.alignContent = "inherit"
+        }
+        function alignItemsFun(){
+            document.getElementById('main').style.alignItems = "center";
+        }
+        function alignSelfFun(){
+            document.getElementById('pinkDiv').style.alignSelf = "stretch";
+            document.getElementById("main").style.cursor = "not-allowed";
+        }
+        function heightWidth(){
+            document.getElementById('height').innerHTML = window.innerHeight;
+        }
+    </script>
+    <style>
+        .myStyle {
+            background-color: coral;
+            padding: 16px;
+        }
+
+        .anotherClass {
+            text-align: center;
+            font-size: 25px;
+        }
+        .thirdClass {
+            text-transform: uppercase;
+        }
+        #main {
+            width: 140px;
+            height: 300px;
+            border: 1px solid #000000;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-around;
+        }
+        #main div {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</body>
+
+</html>

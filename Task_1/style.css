@@ -1,0 +1,17 @@
+.btnDigit{
+    width: 56.5px;
+}
+input{
+    width: 230px;
+}
+.btnPercentage{
+    height: 122px;
+}
+.top-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.btnClear{
+   width: 238px;
+}

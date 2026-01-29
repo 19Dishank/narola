@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <ul id="list">
+        <li></li>
+    </ul>
+    <div id="tbl">
+    </div>
+    <script>
+        const fruites = ["apple", "banana", "kiwi", "mango", "orange"];
+        const persons = [
+            { name: "john", age: 21, dept: "js" },
+            { name: "dev", age: 31, dept: "php" },
+            { name: "steve", age: 54, dept: "java" },
+            { name: "johnson", age: 35, dept: "js" },
+        ];
+        const listEle = document.getElementById('list');
+        listEle.innerHTML = fruites.map(fruit => `<li>${fruit}</li>`).join("")
+        
+        function displayDataInTable(data) {
+            if (data.length === 0) return '';
+            let HTMLtble = `<table border=1>`;
+            HTMLtble += `<thead><tr>`;
+            Object.keys(data[0]).forEach(key => {
+                HTMLtble += `<th>${key}</th>`
+            });
+            HTMLtble += `</tr></thead><tbody>`;
+
+            data.forEach(item => {
+                HTMLtble += '<tr>';
+                Object.values(item).forEach(value => {
+                    HTMLtble += `<td>${value}</td>`;
+                });
+                HTMLtble += '</tr>';
+            });
+            HTMLtble += '</tbody></table>';
+            return HTMLtble;
+        }
+        document.getElementById('tbl').innerHTML = displayDataInTable(persons);
+    </script>
+</body>
+
+</html>

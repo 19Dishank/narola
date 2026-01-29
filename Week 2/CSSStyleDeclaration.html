@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSStyleDeclaration</title>
+</head>
+
+<body>
+    <h1 id="ex1"
+        style="color: tomato !important;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;">
+        CSSStyleDeclaration</h1>
+    <p id="demo1"><b>CSS used in H1 tag is:</b></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+
+        let h1Elem = document.getElementsByTagName('h1')[0];
+        let result = h1Elem.style.cssText;
+        document.getElementById('demo1').innerHTML += " " + result;
+        // console.log(result);
+       
+        function myFunction() {
+            var style = document.getElementById('ex1').style;
+            var propname = style.item(0);
+            document.getElementById('demo2').innerHTML += " " + propname;
+        }
+    </script>
+</body>
+
+</html>

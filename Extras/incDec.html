@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INC DEC</title>
+    <script src="incDec.js" defer></script>
+
+</head>
+
+<body>
+    <h3 id="countDiv">Count : </h3>
+    <button id="incBtn">INCREMENT</button>
+    <button id="decBtn" >DECREMENT</button>
+    <hr>
+    <h4>check Prime</h4>
+    <input type="number" name="num" id="num">
+    <p id="res"></p>
+    <button onclick="checkPrime()">Check</button>
+    <hr>
+    <div>
+        <label for="pwd">Enter Password</label>
+        <input type="password" placeholder="Enter Password" id="pwd">
+        <button id="pwdBtn" onclick="hideShow()">Show Password</button>
+    </div>
+    <hr>
+    <h4>Palindrome Checker</h4>
+    <input type="text" name="" id="pali">
+    <p id="paliRes"></p>
+    <button onclick="checkPalindrome()">Check</button>
+    <hr>
+    <input type="email" name="" id="email" placeholder="Email Validator" required>
+    <p id="emailRes"></p>
+    <button id="emailBtn" onclick="varifyEmail()">Submit</button>
+    <hr>
+    <button onclick="randomNumber()">generate OTP</button>
+    <p id="randNum"></p>
+    <hr>
+    <div id="inputs" class="inputs">
+        <input type="text" inputmode="numeric" maxlength="1" style="width: 20px; height: 20px; text-align: center;">
+        <input type="text" inputmode="numeric" maxlength="1" style="width: 20px; height: 20px; text-align: center;">
+        <input type="text" inputmode="numeric" maxlength="1" style="width: 20px; height: 20px; text-align: center;">
+        <input type="text" inputmode="numeric" maxlength="1" style="width: 20px; height: 20px; text-align: center;">
+        <input type="text" inputmode="numeric" maxlength="1" style="width: 20px; height: 20px; text-align: center;">
+        <input type="text" inputmode="numeric" maxlength="1" style="width: 20px; height: 20px; text-align: center;">
+    </div>
+    <hr>
+    <p id="demo" style="font-size: 20px;">This is Demo Text Click buttons and increse or decrese size of this sentence</p>
+    <button id="plus" onclick="incTxtFun()">+</button>
+    <button id="minus" onclick="decTxtFun()">-</button>
+</body>
+
+</html>

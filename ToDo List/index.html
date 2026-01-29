@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    <div>
+        <h1>ToDo List</h1>
+        <button style="padding: 0.5rem;margin-bottom: 1rem;" id="btnAdd">Add In list</button>
+        <div id="todo" style="width:232px;">
+        </div>
+    </div>
+<script>
+    let btnAdd = document.getElementById('btnAdd');
+    btnAdd.addEventListener("click",function(){
+        const div = document.getElementById('todo');
+        const input = document.createElement('input');
+        const button = document.createElement('button');
+        const hr = document.createElement('hr')
+        input.placeholder = "Write Work here";
+        button.textContent = "Delete";
+        const wrapper = document.createElement('div');
+        wrapper.append(input,button,hr);
+        div.append(wrapper);
+        button.onclick = function(){
+            wrapper.remove();
+        }
+    })
+</script>
+</body>
+</html>

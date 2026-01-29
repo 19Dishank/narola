@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>Date & Time</h2>
+    <img id="myImg" src="https://www.w3schools.com/images/w3schools_green.jpg" width="120">
+    <!-- <button id="" onclick="getDateAndTime()">click me</button>
+        <button id="" onmouseover="getDateAndTime()">Hover me</button>
+        <button id="" onmouseout="getDateAndTime()">Hover me</button>
+        <button id="" onkeydown="getDateAndTime()">press kay keys from keyboard</button> -->
+    <br>
+    <button id="btnDate">click me</button>
+    <button id="btnover">hover me</button>
+    <button id="btnDbc">double click me</button>
+    <p id="dt"></p>
+    <p id="date"></p>
+    <p id="mh"></p>
+    <p id="imgg"></p>
+    <h2>Stopwatch</h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <p id="display">0</p>
+    <input id="inp">
+    <script>
+        let inptxt = "";
+        let btn = document.getElementById('btnDate');
+        let btn2 = document.getElementById('btnover');
+        let btn3 = document.getElementById('btnDbc');
+        let myImg = document.getElementById('myImg');
+        let inp = "";
+        btn2.addEventListener("mouseover", function (event) {
+             event.preventDefault();
+            document.getElementById('dt').innerHTML = "mouse Over Triggerd"
+        });
+        btn2.addEventListener("mouseout", function () {
+            document.getElementById('dt').innerHTML = "mouse gone";
+        });
+        btn3.addEventListener("dblclick", function () {
+            document.getElementById('dt').innerHTML = "Double Clicked";
+        });
+        btn.addEventListener("click", function () {
+            
+            document.getElementById('dt').innerHTML = "button clicked";
+        });
+        function getDateAndTime() {
+            document.getElementById("dt").innerHTML = Date();
+        }
+        document.addEventListener("mousemove", function (event) {
+            document.getElementById('mh').innerHTML = "X: " + event.clientX + "Y: " + event.clientY;
+        });
+        document.addEventListener("keydown", function (event) {
+            document.getElementById('mh').innerHTML = "You Presses: " + event.key;
+            document.getElementById('inp').value = inp += event.key;
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("dt").innerHTML = "HTML is loaded!";
+        });
+        window.addEventListener("load", function () {
+            document.getElementById("dt").innerHTML = "Page is fully loaded!";
+           
+        });
+        myImg.addEventListener("load", function () {
+            document.getElementById("imgg").innerHTML = "Image loaded!";
+            setTimeout(()=>{
+                document.getElementById("imgg").innerHTML = "";
+            },1000);
+        });
+        setInterval(displayTime,0);
+        function displayTime(){
+            const d = new Date();
+            document.getElementById('date').innerHTML = d.getHours() -12 + ":" + d.getMinutes() + ":"+ d.getSeconds() + ", " + d.getDate() + "-" +d.getMonth() + 1;
+        }
+        let myInterval;
+        let count = 0;
+        btnStart = document.getElementById("start");
+        btnStop = document.getElementById("stop");
+        function countNum(){
+            count++;
+            document.getElementById("display").innerHTML = count;
+
+        }
+        btnStart.addEventListener("click",function(){
+            myInterval =  setInterval(countNum,1000);
+        });
+        btnStop.addEventListener("click",function(){
+            clearInterval(myInterval);
+        })
+    </script>
+</body>
+
+</html>

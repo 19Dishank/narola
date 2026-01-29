@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+.card {
+  width: 280px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  
+}
+
+
+
+.card-rating {
+  font-size: 0.95rem;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.card-genre {
+  display: inline-block;
+  background: #222;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  margin-bottom: 12px;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #e50914;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+}
+
+.card-btn:hover {
+  background: #f40612;
+}
+
+.card-divider {
+  border: none;
+  height: 1px;
+  background: #222;
+  margin-top: 15px;
+}
+.rating{
+  padding: 0.2rem;
+  color: black;
+  
+}
+.hit{
+  background-color: rgb(90, 255, 90);
+  border-radius: 100rem;
+  
+}
+.average{
+  background-color: rgb(255, 244, 90);
+  border-radius: 100rem;
+  
+}

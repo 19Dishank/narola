@@ -1,0 +1,69 @@
+1-- display quantity count of each category products
+SELECT 
+	categoty_name,sum (quantity) 
+FROM 
+	Products 
+INNER JOIN
+	Category on Products.category_id = Category.id
+group by categoty_name;
+
+
+
+2-- count of products under category
+SELECT
+	categoty_name,count (category_id) as totalItems from Products 
+INNER JOIN
+	Category on Products.category_id = Category.id
+GROUP BY
+	categoty_name
+
+
+
+3-- display all category
+SELECT categoty_name FROM category
+
+
+
+4--display category wise products
+SELECT 
+	product_name from Products 
+INNER JOIN 
+	Category on Products.category_id = Category.id
+WHERE 
+	category.id = 1
+GROUP BY 
+	product_name
+
+
+
+5--display cart details 
+SELECT 
+    Products.product_name, 
+    Products.price, 
+    cart_table.quantity,
+    (Products.price * cart_table.quantity) AS total
+FROM 
+    cart_table
+INNER JOIN 
+    Products ON cart_table.product_id = Products.product_id
+WHERE 
+    cart_table.user_id = 1;
+	
+
+	
+6-- product review
+SELECT 
+    user.fname, 
+    user.lname, 
+    product.name,
+    review.stars
+FROM 
+    review 
+INNER JOIN 
+	users ON users.user_id = review.user_id
+INNER JOIN 
+	product on product.product_id = review.product_id
+WHERE 
+    user.user_id = 2;
+
+    just a gentle reminder about the React videos you mentioned. Let us know when you share them.

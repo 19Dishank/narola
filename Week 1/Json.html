@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            name: "Dishank",
+            age: 21,
+            city: "surat"
+        }
+        let text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe" },' +
+            '{"firstName":"Anna","lastName":"Smith" },' +
+            '{"firstName":"Peter","lastName":"Jones" }]}';
+        const textArr = '["Ford", "BMW", "Audi", "Fiat"]';
+        const obj = JSON.parse(text);
+        const objArr = JSON.parse(textArr);
+
+        // document.getElementById("demo").innerHTML =
+        //     obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+        const parseDate = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        const parseDateObj = JSON.parse(parseDate);
+        parseDateObj.birth = new Date(parseDateObj.birth);
+        document.getElementById("demo").innerHTML = parseDateObj.birth
+        
+        //stingify()
+        const myJSON = JSON.stringify(obj);
+        document.getElementById("demo").innerHTML = myJSON;
+    </script>
+
+</body>
+
+</html>

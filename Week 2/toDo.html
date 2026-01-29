@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+
+<body>
+    <!-- <h1>HTML DOM </h1>
+    <h4>press alt B to access button </h4>
+    <button id="btn">Button</button>
+    <input type="text" id="inp" placeholder="press alt I to access me">
+    <h3 id="heightWidth"></h3>
+    <h3 id="demo"></h3>
+    <h3 id="cc"></h3> -->
+    <h1 id="todo">Todo</h1>
+    <button onclick="toDoFun()">Add Todo</button>
+    <div id="myDiv">
+
+    </div>
+    <script>
+        // document.getElementById("demo").innerHTML = "<br>Base URI : " + document.baseURI;
+        // document.getElementById('inp').accessKey = "i";
+        // document.getElementById('btn').accessKey = "b";
+
+        // function myFunction() {
+        //     // document.getElementById("heightWidth").innerHTML = document.activeElement.tagName;
+        //     document.getElementById("heightWidth").innerHTML = "Active Element: " + document.activeElement.tagName;
+        //     // document.open();
+        //     // document.write("<h1>Hello World</h1>");
+        //     // document.write("<p>Open a document owerwrites the original content.</p>");
+        //     // document.close();
+        //     let allCookies = document.cookie;
+        //     document.getElementById("cc").innerHTML = allCookies ? allCookies : "Coolies are Null";
+        // }
+        function toDoFun() {
+            const mainDiv = document.getElementById('myDiv');
+            const wrapper = document.createElement('div');
+            wrapper.className = "to-do"
+            const input = document.createElement("input");
+            input.placeholder = "List the tasks";
+            const button = document.createElement('button');
+            button.textContent = "Remove From list";
+           
+            mainDiv.after(wrapper);
+            wrapper.append(input,button);
+            button.onclick = function(){
+                wrapper.remove();
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expence Tracker</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+    <div>
+        <button onclick="addItem()">Add Item</button><br><br>
+        <table border="2" id="tbl">
+            <caption>Expence Table</caption>
+            <th>
+                Item
+            </th>
+            <th>
+                Expence
+            </th>
+            <button onclick="">total</button>
+            <tr id="trr" style="visibility: hidden;">
+                <td id="ttlbtntd"></td>
+                <td id="totalTd">Total: </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let expen = 0;
+        
+        function addItem() {
+            let table = document.getElementById('tbl');
+            // let ttlbtntd = document.getElementById('ttlbtntd');
+            let row = table.insertRow(-1);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+
+            let inputItem = document.createElement('input');
+            inputItem.placeholder = "Item Name";
+
+            let inputExpense = document.createElement('input');
+            inputExpense.type = "number";
+            inputExpense.placeholder = "Amount";
+            inputExpense.onchange = function () {
+                let tr = document.getElementById('trr');
+                tr.style.visibility = "visible";
+                let price = Number(inputExpense.value);
+                
+                expen += price
+                document.getElementById('totalTd').innerHTML = `Total Expence:  ${expen}`;
+            }
+
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+
+            
+
+            deleteButton.onclick = function () {
+                row.remove();
+                let price = Number(inputExpense.value);
+                expen -= price
+                document.getElementById('totalTd').innerHTML = `Total Expence:  ${expen}`;
+            }
+            cell1.appendChild(inputItem);
+            cell2.appendChild(inputExpense);
+            cell3.appendChild(deleteButton);
+        }
+
+    </script>
+</body>
+
+</html>

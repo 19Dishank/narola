@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <button onclick="startBtn()">Start Quiz</button>
+    <h3 id="question"></h3>
+    <input type="text" id="ansBox" style="visibility: hidden;">
+    <button id="ansBtn" onclick="quizChecker()" style="visibility: hidden;">Check Answer</button>
+    <h3 id="ans"></h3>
+    <iframe src="Index.html" height="270px" width="518px"></iframe>
+    <iframe src="/Task_1/index.html" height="200px" width="518px"></iframe>
+    <iframe src="/ToDo List/index.html" height="400px" width="518px"></iframe>
+    <script>
+        let result;
+        const questionbank = {
+            q1: "what is the capital of India",
+            q2: "what is the capital of Gujarat",
+            q3: "what is the name of Prime Minister of India ",
+        }
+
+        const keys = Object.keys(questionbank);
+        const randomIndex = Math.floor(Math.random() * keys.length);
+        const randomQ = keys[randomIndex];
+        const randomA = questionbank[randomQ];
+        const ansBtn = document.getElementById('ansBtn');
+        const ansBox = document.getElementById('ansBox');
+        function startBtn() {
+            document.getElementById('question').innerHTML = randomA;
+            ansBox.style.visibility = "visible"
+            ansBtn.style.visibility = "visible"
+        }
+
+        function quizChecker() {
+            let userinput = document.getElementById('ansBox');
+            let userAns = userinput.value.toLowerCase();
+
+            if (randomQ == "q1") {
+                if (userAns === "delhi") {
+                    result = "Correct Answer"
+                } else {
+                    result = "Opps!! Wrong answer"
+                }
+            } else if (randomQ == "q3") {
+                if (userAns == "narendra modi") {
+                    result = "Correct Answer"
+                } else {
+                    result = "Opps!! Wrong answer"
+                }
+            } else if (randomQ == "q2") {
+                if (userAns == "gandhinagar") {
+                    result = "Correct Answer"
+                } else {
+                    result = "Opps!! Wrong answer"
+                }
+            }
+            document.getElementById('ans').innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1 id="title">Default Title</h1>
+    <h1 id="title1">Default</h1>
+    <p id="demo"></p>
+    <h1 id="aa" onclick="this.innerHTML = 'bye'">click me</h1>
+    <button id="btn">click</button><br><br>
+    <button id="btnc">click me on own risk</button><br><br>
+    <img src="light.webp" id="img"><br><br>
+    <button id="imgBtn">change image</button>
+    <script>
+        let btn = document.getElementById('btn');
+        let imgBtn = document.getElementById('imgBtn');
+        let btnc = document.getElementById('bync');
+        btn.addEventListener("click", function () {
+            document.getElementById("title").innerHTML = "Title changed"
+        });
+        btn.addEventListener("click", function () {
+            const title = document.getElementById("title1");
+            title.innerHTML = "Color changed";
+            title.style.color = "red";
+            document.title = "title changed";
+            document.body.style.background = "pink"
+        });
+        imgBtn.addEventListener("click", function () {
+            let img = document.getElementById("img");
+            img.src = img.src.includes("light.webp") ? "dark.webp" : "light.webp";
+        });
+       
+            document.getElementById("demo").innerHTML =
+                "The full URL of this page is:<br>" + window.location.href + "<br>" + window.location.hostname + " <br>" + window.location.port;
+        
+    </script>
+
+</body>
+
+</html>

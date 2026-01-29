@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+       <p id="demo"></p>
+        
+        <script>
+            let header = "JS Tutorial";
+            const topics = ['array','objects','operators'];
+            let html = `<h1>${header}</h1><ul>`;
+                for (const x of topics){
+                    html += `<li>${x}</li>`;
+                }
+            html += `</ul>`;
+            document.getElementById('demo').innerHTML = html;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">Click</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <iframe height="100px" width="100px" id="frame"></iframe>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let text = "Hello World!";
+        let encoded = window.btoa(text);
+        let decoded = window.atob(encoded);
+        btn1.addEventListener("click", function () {
+            document.getElementById('p1').innerHTML = text;
+            alert(text);
+            confirm("Press a button!\nEither OK or Cancel.");
+            document.getElementById('p2').innerHTML = encoded;
+            document.getElementById('p3').innerHTML = decoded;
+        })
+        function myFunction() {
+            const frame = window.frameElement;
+            if (frame) {
+                frame.src = "https://www.narolainfotech.com/";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second</title>
+</head>
+
+<body>
+    <h1 id="demo">This is second page</h1>
+    <h1 id="location"></h1>
+    <button id="next" onclick="history.back()">back</button>
+    <button id="next" onclick="history.go(-2)">go back 2 pages</button>
+    <button onclick="len()">history</button>
+    <button onclick="location.reload()">Reload Button</button>
+
+    <script>
+        document.getElementById('location').innerHTML = window.location.origin;
+        function len() {
+            document.getElementById('demo').innerHTML = history.length;
+        }
+    </script>
+</body>
+
+</html>

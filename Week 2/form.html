@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="fname">
+        <input type="text" id="lname">
+        <input type="number" id="rn">
+        <select id="gender">
+            <option value="Not Specified">--select--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <button onclick="addDetails()">Add</button>
+        <table border="1" id="tbl">
+            <tr>
+                <th>Roll no</th>
+                <th>name</th>
+                <th>Surname</th>
+                <th>gender</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let fname = document.getElementById('fname');
+        let lname = document.getElementById('lname');
+        let rn = document.getElementById('rn');
+        let gender = document.getElementById('gender');
+
+        function addDetails() {
+            let table = document.getElementById('tbl');
+            let row = table.insertRow(-1);
+            const stud = [];
+            stud.push(fname.value);
+            stud.push(lname.value);
+            stud.push(rn.value);
+            stud.push(gender.value);
+            console.log(stud);
+
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+
+
+            cell1.append(stud[0]);
+            cell2.append(stud[1]);
+            cell3.append(stud[2]);
+            cell4.append(stud[3]);
+
+            fname.value = ""
+            lname.value = ""
+            rn.value = ""
+        }
+    </script>
+</body>
+
+</html>

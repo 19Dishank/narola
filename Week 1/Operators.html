@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <H1>Arithmetic Operator</H1>
+      <p id="demo"></p>
+      <H1>Assignment Operator</H1>
+      <p id="demo1"></p>
+      <H1>Comparison Operator</H1>
+      <p id="demo2"></p>
+      <p id="demo3"></p>
+      <p id="demo4"></p>
+      <p id="demo5"></p>
+      <p id="demo6"></p>
+      <p id="demo7"></p>
+      <p id="demo8"></p>
+      <p id="demo9"></p>
+      <p id="demo10"></p>
+      <p id="demo11"></p>
+      
+        
+        <script>
+            // arithmatic operator
+            let a = 10;
+            let b = 2;
+            let add = (a + b);
+            let sub = (a - b);
+            let mul = (a * b);
+            let div = (a / b);
+            let mod = (a % b);
+            let inc = b++ ; x = b;
+            let dec = a-- ; y = a;
+            let prec = (a + b) / b;
+            document.getElementById('demo').innerHTML = 
+            "number1 " + a + "<br>" +
+            "number2 " + b + "<br>" +
+            "addition " + add + "<br>" +
+            "substraction " + sub + "<br>" +
+            "multiplication  " + mul + "<br>" +
+            "division " + div + "<br>" +
+            "Modulus  " + mod + "<br>" +
+            "increment " + x + "<br>" +
+            "decrement " + y + "<br>" +
+            "Precedence " + prec + "<br>" ;
+            //assignment operatior
+            let e = 10;
+            let nums = "123456";
+            let name = "hello";
+            let f = e += 5;
+            let g = e -= 5;
+            let h = e*=5;
+            let k = e**=2;
+            let j = e /= 5;
+            let l = e %= 3;
+            let m = name += " world";
+            let s = Math.max(...nums);
+            let t = Math.min(...nums);
+            document.getElementById('demo1').innerHTML = 
+             e + "<br>" +
+            " " + f + "<br>" +
+            " " + g + "<br>" +
+            " " + h + "<br>" +
+            "  " + k + "<br>" +
+            " " + j + "<br>" +
+            " " + l + "<br>" +
+            " " + m + "<br>" +
+            " " + s + "<br>" +
+            " " + t + "<br>" ;
+
+            //Comparison Operator
+            let char1 = "A";
+            let char2 = "B";
+            document.getElementById('demo2').innerHTML = "A < B " + char1 < char2;
+            document.getElementById('demo3').innerHTML = "A > B " + char1 > char2;
+            document.getElementById('demo4').innerHTML = "1 > 2 " + 1 > 2;
+            document.getElementById('demo5').innerHTML = "1 < '2' " + 11 < "2";
+            document.getElementById('demo6').innerHTML = "1 < 'JOHN' " + 1 < "JOHN";
+            document.getElementById('demo7').innerHTML = "1 > 'JOHN' " + 1 > "JOHN";
+            document.getElementById('demo8').innerHTML = "1 == 'JOHN' " + 1 == "JOHN";
+            document.getElementById('demo9').innerHTML = "'1' > '2' " + "1" > "2";
+            document.getElementById('demo10').innerHTML = "'1' < '2' " + "1" < "2";
+            document.getElementById('demo11').innerHTML = "'1' == '2' " + "1" == "2";
+           
+        </script>
+    </body>
+</html>

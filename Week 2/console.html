@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btn" onclick="consoleFun()">Click</button>
+    <button type="button" id="btn" onclick="consoleFunClear()">Clear</button>
+    <script>
+        let x = 10;
+        let y = 20;
+        let arr = [1,2,34,5]
+        const person = {
+            name: "Dishank",
+            age: 21
+        }
+        function consoleFun(){
+            console.assert(x + y == 3,"Faild");
+            console.error("Error Occured");
+            console.count("clik: ");
+            console.info("hello");
+            console.group("group");
+            console.log("1 inside the group");
+            console.log("2 inside the group");
+            console.groupEnd();
+            console.groupCollapsed("Collapsed group");
+            console.log("1 inside the Collapsed group");
+            console.log("2 inside the Collapsed group");
+            console.groupEnd();
+            console.table(arr);
+            console.table(person);
+
+            console.time("For Loop: ");
+            for(let i = 0;i <1000000;i++){
+
+            }
+            console.timeEnd("For Loop: ");
+
+            console.time("while Loop: ");
+            let i = 0;
+            while(i < 1000000){
+                i++;
+            }
+            console.timeEnd("while Loop: ");
+            console.warn("WARNING");  
+            fun1();
+              
+        }
+        function fun1(){
+            fun2();
+        }
+        function fun2(){
+            console.trace();
+        }
+        function consoleFunClear(){
+            console.clear();
+        }
+    </script>
+</body>
+</html>

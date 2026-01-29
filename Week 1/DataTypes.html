@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      
+    </head>
+    <body>
+       
+        <p id="demo"></p>
+        <script>
+            //Number
+            let a = 21;
+            let b =  3.14;
+            // String
+            let name = "Dishank"
+            // Bignint
+            let c= 98798654654545465n;
+            let d = BigInt(1233545855845);
+            // Boolean
+            let e = true;
+            let f = false;
+            // Array 
+            const colors = ['Red','Blue','Pink'];
+            // Objects
+            const person = {
+                name:name,
+                age:a,
+                isActive:e
+            };
+            // Undefined
+            let g;
+            let h;
+            // Null
+            let i = null;
+            //symbol
+            // let j = Symbol();
+            document.getElementById('demo').innerHTML = 
+            a + "<br>" +
+            b + "<br>" +
+            c + "<br>" +
+            name + "<br>" +
+            d + "<br>" +
+            e + "<br>" +
+            f + "<br>" +
+            g + "<br>" +
+            h + "<br>" +
+            i + "<br>" +
+            // j + "<br>" +
+            person.name + " Is " + person.age + "Years Old" + "<br>" +
+            colors;
+            
+        </script>
+    </body>
+</html>

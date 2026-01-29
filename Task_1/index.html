@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div>
+        <table>
+            <caption>Calculator</caption>
+            <tr>
+                <th><input type="text" id="display" value=0 readonly ></th>
+                <th rowspan="5"><button class="btnPercentage"  onclick="backSpaceFun()"> ⌫ </button></th>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnDigit" onclick="appendNumber('1')">1</button>
+                    <button class="btnDigit" onclick="appendNumber('2')">2</button>
+                    <button class="btnDigit" onclick="appendNumber('3')">3</button>
+                    <button class="btnDigit" onclick="appendNumber('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnDigit" onclick="appendNumber('4')">4</button>
+                    <button class="btnDigit" onclick="appendNumber('5')">5</button>
+                    <button class="btnDigit" onclick="appendNumber('6')">6</button>
+                    <button class="btnDigit" onclick="appendNumber('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnDigit" onclick="appendNumber('7')">7</button>
+                    <button class="btnDigit" onclick="appendNumber('8')">8</button>
+                    <button class="btnDigit" onclick="appendNumber('9')">9</button>
+                    <button class="btnDigit" onclick="appendNumber('*')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btnDigit" onclick="appendNumber('%')">%</button>
+                    <button class="btnDigit" onclick="appendNumber('0')">0</button>
+                    <button class="btnDigit" style="background-color: rgb(67, 67, 255);color: white;" onclick="SumFun()">=</button>
+                    <button class="btnDigit" onclick="appendNumber('/')">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button colspan="5" style="background-color: rgb(255, 17, 0);" class="btnClear" onclick="clearFun()">Clear</button>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    let input = document.getElementById('display'); 
+    function appendNumber(number) {
+        if (input.value === "0") {
+            display.value = number
+        } else {
+            display.value += number
+        }
+    }
+    function clearFun() {
+        input.value = "0";
+    }
+    function SumFun() {
+        try {
+            let result = eval(input.value);
+            input.value = result;
+        } catch (error) {
+            input.value = "Error";
+        }
+    }
+    function backSpaceFun() {
+        let newNum = input.value;
+        newNum = newNum.slice(0, -1);
+        input.value = newNum;
+    }
+        // function inputByKeyboard(event){
+        //     let newText = input.value;
+        //     newText = event.key;
+        //     input.value += newText;
+        // }
+</script>
+
+</html>

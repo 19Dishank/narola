@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script>
+            
+            function addition(){
+                let a = document.getElementById('num1').value
+                let b = document.getElementById('num2').value
+                const n1 = Number(a);
+                const n2 = Number(b);
+                document.getElementById('ans').innerHTML = (n1 + n2);
+            }
+            function substraction(){
+                let a = document.getElementById('num1').value
+                let b = document.getElementById('num2').value
+                const n1 = Number(a);
+                const n2 = Number(b);
+                document.getElementById('ans').innerHTML = (n1 - n2);
+            }
+            function multiplication(){
+                let a = document.getElementById('num1').value
+                let b = document.getElementById('num2').value
+                const n1 = Number(a);
+                const n2 = Number(b);
+                document.getElementById('ans').innerHTML = (n1 * n2);
+            }
+            function division(){
+                let a = document.getElementById('num1').value
+                let b = document.getElementById('num2').value
+                const n1 = Number(a);
+                const n2 = Number(b);
+                document.getElementById('ans').innerHTML = (n1 / n2);
+            }
+            function exampleVariable(){
+                let age = 20;
+                const name = "John Doe";
+                document.getElementById("demo").innerHTML = name + " is " + age + " years old.";
+            }
+            
+        </script>
+    </head>
+    <body>
+        
+        <input type="number" id="num1"/>
+        <input type="number" id="num2"/><br><br>
+        <button onclick="addition()">addition</button>
+        <button onclick="substraction()">substraction</button>
+        <button onclick="multiplication()">multiplication</button>
+        <button onclick="division()">division</button>
+        <h3 id="ans">ANSWER</h3>
+
+       <h2>Js Syntax,Values,Varibles,Keywords</h2>
+       <p id="example"></p>
+       <p id="demo"></p>
+       <button type="button" onclick="document.getElementById('example').innerHTML = 100 ">Literal Example Number</button>
+       <button type="button" onclick="document.getElementById('example').innerHTML = 10011.11 ">Literal Example Number</button>
+       <button type="button" onclick="document.getElementById('example').innerHTML = 'john Doe' ">Literal Example String</button>
+       <button type="button" onclick="exampleVariable()">exampleVariable</button>
+    </body>
+</html>
