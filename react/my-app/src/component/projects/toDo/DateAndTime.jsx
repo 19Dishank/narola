@@ -8,14 +8,10 @@ function DateAndTime(props) {
             const now = new Date();
             const formattedDate = now.toLocaleDateString();
             const formattedTime = now.toLocaleTimeString();
-
             setDateTime(`${formattedDate} - ${formattedTime}`)
-
         }, 0);
-
         return () => clearInterval(interval)
-
-    }, [])
+    }, []);
     return (
         <span className='text-neutral-100/50 min-h-6'>{dateTime}</span>
     );
